@@ -114,8 +114,8 @@ pub mod config {
         }
 
         #[must_use]
-        pub fn resolution(mut self, resolution: Resolution) -> Self {
-            self.resolution = resolution;
+        pub fn resolution(mut self, res: Resolution) -> Self {
+            self.resolution = res;
             self
         }
 
