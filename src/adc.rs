@@ -85,8 +85,8 @@ pub mod config {
     }
 
     impl From<Resolution> for adc_bits_width_t {
-        fn from(resolution: Resolution) -> Self {
-            match resolution {
+        fn from(res: Resolution) -> Self {
+            match res {
                 #[cfg(esp32)]
                 Resolution::Resolution9Bit => adc_bits_width_t_ADC_WIDTH_BIT_9,
                 #[cfg(esp32)]

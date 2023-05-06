@@ -73,8 +73,8 @@ pub mod config {
 
     impl From<Timing> for twai_timing_config_t {
         #[allow(clippy::needless_update)]
-        fn from(resolution: Timing) -> Self {
-            match resolution {
+        fn from(res: Timing) -> Self {
+            match res {
                 Timing::B25K => twai_timing_config_t {
                     brp: 128,
                     tseg_1: 16,
